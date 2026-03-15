@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+<meta charset="UTF-8">
+<title>Обратная связь</title>
+<link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+
+<header>
+<h1>Форма обратной связи</h1>
+</header>
+
+<nav>
+<a href="/">Главная</a> |
+<a href="/feedback">Обратная связь</a> |
+<a href="/submissions">Все заявки</a>
+</nav>
+
+<main>
+
+<section>
+
+<form action="/api/feedback" method="post">
+
+<fieldset>
+
+<legend>Контактная информация</legend>
+
+<label for="name">Имя</label>
+<input type="text" id="name" name="name" list="names">
+
+<datalist id="names">
+<option value="Анна">
+<option value="Мария">
+<option value="Елена">
+</datalist>
+
+<br><br>
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email">
+
+<br><br>
+
+<label for="course">Курс</label>
+
+<select id="course" name="course">
+
+<optgroup label="Бакалавриат">
+<option value="1 курс">1 курс</option>
+<option value="2 курс">2 курс</option>
+<option value="3 курс">3 курс</option>
+<option value="4 курс">4 курс</option>
+</optgroup>
+
+</select>
+
+</fieldset>
+
+<br>
+
+<fieldset>
+
+<legend>Сообщение</legend>
+
+<label>Тема</label>
+
+<input type="radio" name="topic" value="Учёба"> Учёба
+<input type="radio" name="topic" value="Математика"> Математика
+<input type="radio" name="topic" value="Программирование"> Программирование
+
+<br><br>
+
+<label for="message">Сообщение</label>
+
+<textarea id="message" name="message" rows="5"></textarea>
+
+<br><br>
+
+<label>
+<input type="checkbox" name="subscribe">
+Подписаться на новости
+</label>
+
+<br><br>
+
+<button type="submit">Отправить</button>
+<button type="reset">Очистить</button>
+
+</fieldset>
+
+</form>
+
+</section>
+
+</main>
+
+<footer>
+
+<hr>
+
+<p>© 2026 ВШЭ</p>
+
+</footer>
+
+</body>
+</html>
